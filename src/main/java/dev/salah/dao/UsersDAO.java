@@ -30,7 +30,7 @@ public class UsersDAO {
         try {
             DBInteraction.connect();
             ResultSet rs = DBInteraction.select("SELECT * FROM `users`");
-            List<User> users = new ArrayList<User>();
+            List<User> users = new ArrayList<>();
             while (rs.next()) {
                 users.add(getUserFromResultSet(rs));
             }

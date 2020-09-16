@@ -22,7 +22,7 @@ public class CartsDAO {
         try {
             DBInteraction.connect();
             ResultSet rs = DBInteraction.select("SELECT * FROM `carts`");
-            List<Cart> carts = new ArrayList<Cart>();
+            List<Cart> carts = new ArrayList<>();
             while (rs.next()) {
                 carts.add(getCartFromResultSet(rs));
             }
@@ -96,7 +96,7 @@ public class CartsDAO {
         try {
             DBInteraction.connect();
             ResultSet rs = DBInteraction.select("SELECT * FROM `carts` c WHERE c.user_id = " + uid);
-            List<Cart> carts = new ArrayList<Cart>();
+            List<Cart> carts = new ArrayList<>();
             while (rs.next()) {
                 carts.add(getCartFromResultSet(rs));
             }

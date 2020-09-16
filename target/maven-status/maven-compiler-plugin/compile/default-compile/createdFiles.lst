@@ -1,0 +1,10 @@
+dev\salah\dao\BooksDAO.class
+dev\salah\DBInteraction.class
+dev\salah\beans\User.class
+dev\salah\dao\CategoriesDAO.class
+dev\salah\dao\UsersDAO.class
+dev\salah\beans\Book.class
+dev\salah\dao\CartsDAO.class
+dev\salah\beans\Cart.class
+dev\salah\services\Bookstore.class
+dev\salah\beans\Category.class

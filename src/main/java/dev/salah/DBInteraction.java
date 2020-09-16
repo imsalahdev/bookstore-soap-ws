@@ -18,7 +18,7 @@ public class DBInteraction {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore-ws", "root", "");
-        } catch (Exception e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
@@ -67,7 +67,7 @@ public class DBInteraction {
             if (conn != null) {
                 conn.close();
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

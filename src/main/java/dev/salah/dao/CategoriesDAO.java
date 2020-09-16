@@ -22,7 +22,7 @@ public class CategoriesDAO {
         try {
             DBInteraction.connect();
             ResultSet rs = DBInteraction.select("SELECT * FROM `categories`");
-            List<Category> categories = new ArrayList<Category>();
+            List<Category> categories = new ArrayList<>();
             while (rs.next()) {
                 Category category = new Category();
                 category.setId(rs.getInt("id"));

@@ -32,7 +32,7 @@ public class BooksDAO {
         try {
             DBInteraction.connect();
             ResultSet rs = DBInteraction.select("SELECT * FROM books");
-            List<Book> books = new ArrayList<Book>();
+            List<Book> books = new ArrayList<>();
             while (rs.next()) {
                 books.add(getBookFromResultSet(rs));
             }
@@ -64,7 +64,7 @@ public class BooksDAO {
         try {
             DBInteraction.connect();
             ResultSet rs = DBInteraction.select("SELECT * FROM `books` b WHERE b.categoryID = " + id);
-            List<Book> books = new ArrayList<Book>();
+            List<Book> books = new ArrayList<>();
             while (rs.next()) {
                 books.add(getBookFromResultSet(rs));
             }
